@@ -1,5 +1,5 @@
 import React from "react";
-import "./filtercomponent.css";
+// import "./filtercomponent.css";
 function FilterComponent({ children }) {
   return (
     <div
