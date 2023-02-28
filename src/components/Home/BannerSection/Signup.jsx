@@ -31,19 +31,25 @@ export default function Signup() {
     e.preventDefault();
 
     if (!fullName) {
-      setFormError({ ...formError, fullName: "This field is required." });
+      setFormError((prev) => ({
+        ...prev,
+        fullName: "Name is required.",
+      }));
     } else {
-      setFormError({ ...formError, fullName: "" });
+      setFormError((prev) => ({ ...prev, fullName: "" }));
     }
     if (!email) {
-      setFormError({ ...formError, email: "This field is required." });
+      setFormError((prev) => ({ ...prev, email: "Email is required." }));
     } else {
-      setFormError({ ...formError, email: "" });
+      setFormError((prev) => ({ ...prev, email: "" }));
     }
     if (!password) {
-      setFormError({ ...formError, password: "This field is required." });
+      setFormError((prev) => ({
+        ...prev,
+        password: "Password is required.",
+      }));
     } else {
-      setFormError({ ...formError, password: "" });
+      setFormError((prev) => ({ ...prev, password: "" }));
     }
 
     if (email && password && fullName && checkbox) {

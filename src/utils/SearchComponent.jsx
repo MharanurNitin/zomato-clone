@@ -67,18 +67,18 @@ function SearchComponent() {
           className="search-results-container"
           onClick={() => setInputInFocus(true)}
         >
-          <div className="location-detecter">
+          {/* <div className="location-detecter">
             <TbCurrentLocation />
 
             <h3>Detect your current location</h3>
-          </div>
+          </div> */}
           <div className="search-results-contain">
             {LocationSearchResult?.map((el) => {
               return (
                 <h3
                   style={{
                     borderBottom: "1px solid #ddd",
-                    padding: "3px",
+                    padding: "8px",
                     cursor: "pointer",
                   }}
                   onClick={() =>

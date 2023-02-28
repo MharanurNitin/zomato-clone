@@ -5,16 +5,17 @@ import SearchComponent from "../utils/SearchComponent";
 import SignupLoginButton from "../utils/SignupLoginButton";
 import { useSetRecoilState } from "recoil";
 import { loginUserAtom } from "../global-state";
-
+// const setLoginUser = useSetRecoilState(loginUserAtom);
 import "./restaurantList.css";
 import { useParams } from "react-router-dom";
 function RestaurantList() {
   const [userIsLogged, setIsUserLogged] = useState(false);
   const city = useParams();
+  let data = JSON.parse(localStorage.getItem("loginUser"));
   useEffect(() => {
-    let data = JSON.parse(localStorage.getItem("loginUser"));
     if (data?.email) {
       setIsUserLogged(true);
+      // setLoginUser(true);
     }
   }, []);
   const logo =
@@ -30,7 +31,7 @@ function RestaurantList() {
             <SearchComponent />
           </div>
           <div className="authentication-container">
-            {userIsLogged ? <Avatar /> : <SignupLoginButton />}
+            {userIsLogged ? <Avatar data={data} /> : <SignupLoginButton />}
           </div>
         </div>
       </div>

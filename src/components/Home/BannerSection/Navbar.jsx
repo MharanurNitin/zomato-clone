@@ -11,11 +11,12 @@ function Navbar() {
   const [LoginUserData, setLoggedInUserData] = useState("");
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("loginUser")) || "";
-    if (data.email) {
+    if (data?.email) {
       setLoginUser(true);
       setLoggedInUserData(data);
+    } else {
+      setLoginUser(false);
     }
-    setLoginUser(false);
   }, []);
   return (
     <div className="Navbar">
