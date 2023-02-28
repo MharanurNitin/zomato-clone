@@ -29,7 +29,8 @@ function ClickedSingleRestaurantDetail() {
   }
   useEffect(() => {
     const login_user = JSON.parse(localStorage.getItem("loginUser"));
-    CartDishes(login_user.id);
+
+    CartDishes(login_user?.id);
   }, [changingAtoms]);
   return (
     <>

@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const cityAtom = atom({
   key: "city",
-  default: "Mumbai",
+  default: "mumbai",
 });
 
 export const loginUserAtom = atom({

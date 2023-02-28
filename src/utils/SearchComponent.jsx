@@ -47,7 +47,7 @@ function SearchComponent() {
           onFocus={() => {
             setInputInFocus(true);
           }}
-          // onBlur={() => setInputInFocus(false)}
+          onBlur={() => setTimeout(() => setInputInFocus(false), 200)}
         />
         <p className="down">
           {locationSearch ? <AiOutlineCaretUp /> : <AiOutlineCaretDown />}
