@@ -1,0 +1,21 @@
+.Navbar{
+    color:white;
+    width:80%;
+    /* border:1px solid white; */
+    height:45px;
+    display:flex;
+    justify-content:flex-end;
+    margin: top -6rem;
+    /* margin-bottom:40px; */
+    
+    gap:75px;
+    /* border:1px solid black; */
+}
+.Navbar li{
+    font-size:18px;
+    cursor:pointer;
+}
+.profile-container{
+    width:fit-content;
+    height:100%;
+}

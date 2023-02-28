@@ -1,0 +1,84 @@
+.get-app-container{
+    width:86%;
+    height:70vh;
+    background-color: rgb(255, 251, 247);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.get-app-container h1{
+    /* text-align:center; */
+    font-size:42px;
+}
+.get-app-container h3{
+    margin-left:-20px;
+}
+.get-app-decription{
+    display:flex;
+    width:60%;
+    column-gap:30px;
+}
+.get-app-decription .img-container{
+    height:300px;
+    height:300px;
+    display: flex;
+        align-items: center;
+      
+}
+.get-app-decription .img-container img{
+    width:100%;
+    height:100%;
+    display:block;
+    margin-top:120px;
+}
+.get-app-decription .right-section{
+    display:flex;
+    flex-direction:column;
+    row-gap:25px;
+}
+
+.get-app-decription .right-section .radioboxes{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+.get-app-decription .right-section .radioboxes input{
+    width:18px;
+    height:18px;
+    color:pink;
+    background-color: pink;
+}
+.shareButton input{
+    padding:10px;
+    width:260px;
+    border-radius: 5px;
+    outline:none;
+    font-size:16px;
+}
+.shareButton button{
+    background-color:rgb(238, 87, 112);
+    padding:7px;
+    width:170px;
+    color:white;
+    font-size: 18px;
+    margin-left:30px;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:5px;
+}
+.download_options{
+    display:flex;
+    gap:30px;
+}
+.download_options img{
+    display:inline-block;
+    width:200px;
+    height:60px;
+    cursor:pointer;
+    transition:linear 0.3s;
+
+}
+.download_options img:hover{
+    transform:scale(1.03)
+}

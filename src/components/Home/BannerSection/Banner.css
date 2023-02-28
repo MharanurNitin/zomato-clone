@@ -1,0 +1,45 @@
+.homepage_hero_container {
+    background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+    width: 100%;
+    /* border:1px solid black; */
+    height: 445px;
+    background-repeat: no-repeat;
+    /* background-size:cover; */
+    background-position: center center;
+    transform: scale(1.13);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    /* gap: 50px; */
+    object-fit: cover;
+}
+
+.functionality_container {
+    width: 70%;
+    /* height:50%; */
+    /* border:1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    position:relative;
+
+}
+
+.homepage_hero_container .logo {
+    width: 280px;
+
+}
+
+.homepage_hero_container .logo img {
+    width: 100%;
+}
+
+.homepage_hero_container .title {
+    font-size: 26px;
+    color: white;
+}
+
+/* .homepage_hero_container  */

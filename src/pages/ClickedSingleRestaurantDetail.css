@@ -1,0 +1,36 @@
+.cartAnddishes-container{
+    display:flex;
+    gap:1rem;
+}
+.dishes{
+    width:70%;
+}
+.cart{
+    border:1px solid black;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items: space-between;
+    /* justify-content:center; */
+    padding:3px;
+}
+.one_cart{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-block:10px;
+}
+.cart_image-container{
+    width:3rem;
+    height:3rem;
+}
+.cart_image-container img{
+    width:100%;
+    height:100%;
+}
+.cart_image_description{
+    width:80%;
+}
+.cart_image_description h3,p{
+    word-wrap:break-word;
+}

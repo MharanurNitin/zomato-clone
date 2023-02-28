@@ -1,0 +1,17 @@
+.card-container{
+   width:23%;
+   height:370px;
+   display:flex;
+   flex-direction:column;
+   justify-content: end;
+   margin-top:20px;
+   border-radius:10px;
+    color: white;
+    object-fit:cover;
+    /* text-align:center; */
+}
+
+.card-container h2,h3{
+  padding-left:1.5rem;
+
+}

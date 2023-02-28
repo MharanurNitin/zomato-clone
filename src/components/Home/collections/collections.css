@@ -1,0 +1,32 @@
+.collections_container{
+    width:86%;
+    /* height:200px; */
+    padding-inline:12px;
+}
+.collections_container h1{
+    font-size:36px;
+    color:1c1c1c;
+}
+.collection_subtitle{
+    display:flex;
+    justify-content:space-between;
+}
+.collection_subtitle .link{
+    color:rgb(241, 123, 143);
+    cursor:pointer;
+}
+/* .collection_subtitle .link span{
+    /* padding-top:15px; */
+    /* display:inline-flex;
+    align-items:center;
+    border:1px solid black; */
+    /* display:inline-block; */
+/* }  */
+
+.collection-cards{
+    width:100%;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}

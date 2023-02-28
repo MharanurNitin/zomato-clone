@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.heading{
+    display:flex;
+    justify-content: space-between;
+    padding:5px;
+}
+.heading h3{
+    margin-left:-10px;
+}
+.heading h4{
+    cursor:pointer;
+    color:rgb(238, 164, 164);
+}
+.signupform{
+    display:flex;
+    flex-direction:column;
+    width:450px;
+    gap:20px;
+}
+.input-field-wrapper{
+    width:100%;
+}
+.signupform input[type="text"],[type="password"]{
+ padding:15px;
+ border-radius: 5px;
+ font-size: 17px;
+ width:100%;
+}
+
+.conditions{
+    display:flex;
+    width:100%;
+    font-size:14px;
+    gap:10px;
+   
+}
+.conditions b{
+color:rgb(224, 55, 83);
+font-size:14px;
+}
+.conditions input{
+    width:23px;
+    height:23px;
+    margin-top:3px;
+}
+.or{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.or span{
+    width:175px;
+    display:inline-block;
+    border:.4px solid #bbb;
+}
+.dialogbox{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+.dialogbox a{
+    color:rgb(224, 55, 83);
+}
+.dialogbox button{
+    width:100%;
+    padding:15px;
+    text-align:center;
+    border-radius: 5px;
+    font-size:19px;
+    color:white;
+    outline:none;
+    border:none;
+}
+.signupform button{
+    background-color: rgb(224, 55, 83);
+    border-bottom:15px;
+}
