@@ -19,7 +19,7 @@ export default function LoginForm() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [loginUser, setLoginUser] = React.useState({});
-  const setLoginUse = useSetRecoilState(loginUserAtom);
+  const setLogUser = useSetRecoilState(loginUserAtom);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -38,7 +38,7 @@ export default function LoginForm() {
       const data = await result.json();
       console.log(data.loginUserData);
       if (data.loginUserData.email) {
-        setLoginUse(data.loginUserData);
+        setLogUser(data.loginUserData);
         setLoginUser(data.loginUserData);
         localStorage.setItem(
           "loginUser",

@@ -3,13 +3,13 @@ import { Outlet, useNavigate } from "react-router-dom";
 import Avatar from "../utils/Avatar";
 import SearchComponent from "../utils/SearchComponent";
 import SignupLoginButton from "../utils/SignupLoginButton";
-import { useSetRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { loginUserAtom } from "../global-state";
 // const setLoginUser = useSetRecoilState(loginUserAtom);
 import "./restaurantList.css";
 import { useParams } from "react-router-dom";
 function RestaurantList() {
-  const [userIsLogged, setIsUserLogged] = useState(false);
+  const userIsLogged = useRecoilValue();
   const city = useParams();
   const navigate = useNavigate();
   let data = JSON.parse(localStorage.getItem("loginUser"));
