@@ -49,7 +49,6 @@ export default function LoginForm() {
           })
         );
       }
-      // console.log(data);
       setEmail("");
       setPassword("");
       setOpen(false);

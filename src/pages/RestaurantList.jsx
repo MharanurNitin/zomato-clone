@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Avatar from "../utils/Avatar";
 import SearchComponent from "../utils/SearchComponent";
 import SignupLoginButton from "../utils/SignupLoginButton";
@@ -11,6 +11,7 @@ import { useParams } from "react-router-dom";
 function RestaurantList() {
   const [userIsLogged, setIsUserLogged] = useState(false);
   const city = useParams();
+  const navigate = useNavigate();
   let data = JSON.parse(localStorage.getItem("loginUser"));
   useEffect(() => {
     if (data?.email) {
@@ -24,7 +25,7 @@ function RestaurantList() {
     <div className="Restaurant-container-page">
       <div className="sub-container">
         <div className="header-search">
-          <div className="image-container">
+          <div className="image-container" onClick={() => navigate("/")}>
             <img src={logo} />
           </div>
           <div className="search-input-containter">
