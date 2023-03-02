@@ -13,5 +13,5 @@ export const loginUserAtom = atom({
 
 export const changingAtom = atom({
   key: "changingAtom",
-  default: true,
+  default: 1,
 });

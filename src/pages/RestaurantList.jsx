@@ -9,16 +9,11 @@ import { loginUserAtom } from "../global-state";
 import "./restaurantList.css";
 import { useParams } from "react-router-dom";
 function RestaurantList() {
-  const userIsLogged = useRecoilValue();
+  const userIsLogged = useRecoilValue(loginUserAtom);
   const city = useParams();
   const navigate = useNavigate();
   let data = JSON.parse(localStorage.getItem("loginUser"));
-  useEffect(() => {
-    if (data?.email) {
-      setIsUserLogged(true);
-      // setLoginUser(true);
-    }
-  }, []);
+
   const logo =
     "https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png";
   return (

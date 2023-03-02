@@ -36,8 +36,8 @@ export default function LoginForm() {
         headers: { "Content-Type": "application/json" },
       });
       const data = await result.json();
-      console.log(data.loginUserData);
-      if (data.loginUserData.email) {
+
+      if (data.status === "success") {
         setLogUser(data.loginUserData);
         setLoginUser(data.loginUserData);
         localStorage.setItem(
@@ -48,10 +48,11 @@ export default function LoginForm() {
             id: data.loginUserData._id,
           })
         );
+
+        setEmail("");
+        setPassword("");
+        setOpen(false);
       }
-      setEmail("");
-      setPassword("");
-      setOpen(false);
     }
   }
   React.useEffect(() => {

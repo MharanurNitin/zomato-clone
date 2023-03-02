@@ -9,3 +9,12 @@
         height: 3rem;
     object-fit: cover;
 }
+.Avatar-container button{
+    border:none;
+    color:rgb(96, 199, 96);
+    outline:none;
+    border-radius:3px;
+    align-items:center;
+    padding-inline:.5rem;
+    /* padding:3px; */
+}

@@ -7,6 +7,7 @@ import OrderOnline from "./components/RestaurantList/OrderOnline";
 import DineOut from "./components/RestaurantList/DineOut";
 import NightLife from "./components/RestaurantList/NightLife";
 import ClickedSingleRestaurantDetail from "./pages/ClickedSingleRestaurantDetail";
+import CheckoutPage from "./pages/CheckoutPage";
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
                 element={<ClickedSingleRestaurantDetail />}
               />
             </Route>
+            <Route path="/checkout/order" element={<CheckoutPage />} />
           </Routes>
         </BrowserRouter>
       </RecoilRoot>

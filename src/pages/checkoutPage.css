@@ -1,0 +1,26 @@
+.CheckoutPage-header{
+    width:100%;
+    height:2.5rem;
+    /* border:1px solid black; */
+    padding-inline:3rem;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top:1rem;
+}
+.checkout-image-container{
+    width:200px;
+    height:100%;
+}
+.checkout-image-container img{
+    width:100%;
+    height:100%;
+}
+.auth-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+}

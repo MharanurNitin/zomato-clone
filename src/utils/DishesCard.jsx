@@ -16,7 +16,7 @@ function DishesCard({ dish }) {
   }
 
   async function AddToCart(dish) {
-    setChanginAtom(!changingAtoms);
+    setChanginAtom(Math.floor(Math.random() * 10000));
     if (login_user) {
       let response = await fetch("http://localhost:3000/Cart/AddToCart", {
         method: "POST",

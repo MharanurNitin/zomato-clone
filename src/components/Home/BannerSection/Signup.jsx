@@ -25,11 +25,22 @@ export default function Signup() {
   };
 
   const handleClose = () => {
+    setFormError({});
+    setFullName("");
+    setEmail("");
+    setPassword("");
+    setMessage("");
     setOpen(false);
   };
   async function handleSubmit(e) {
     e.preventDefault();
-
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (password.length < 6) {
+      setFormError((prev) => ({
+        ...prev,
+        password: "password must be at least 6 characters",
+      }));
+    }
     if (!fullName) {
       setFormError((prev) => ({
         ...prev,
@@ -40,6 +51,11 @@ export default function Signup() {
     }
     if (!email) {
       setFormError((prev) => ({ ...prev, email: "Email is required." }));
+    } else if (!regex.test(email)) {
+      setFormError((prev) => ({
+        ...prev,
+        email: "This is not a valid email Format.",
+      }));
     } else {
       setFormError((prev) => ({ ...prev, email: "" }));
     }
@@ -47,6 +63,11 @@ export default function Signup() {
       setFormError((prev) => ({
         ...prev,
         password: "Password is required.",
+      }));
+    } else if (password.trim().length < 6) {
+      setFormError((prev) => ({
+        ...prev,
+        password: "password must be at least 6 characters",
       }));
     } else {
       setFormError((prev) => ({ ...prev, password: "" }));
@@ -67,10 +88,12 @@ export default function Signup() {
       setFullName("");
       setEmail("");
       setPassword("");
-      setTimeout(() => {
-        setOpen(false);
-        setMessage("");
-      }, 2000);
+      if (result.status === "success") {
+        setTimeout(() => {
+          setOpen(false);
+          setMessage("");
+        }, 2000);
+      }
     }
   }
 
@@ -114,7 +137,7 @@ export default function Signup() {
                   type="text"
                   value={email}
                   placeholder="Email"
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value.trim())}
                 />
                 <p className="error">{formError?.email}</p>
               </div>
@@ -123,7 +146,7 @@ export default function Signup() {
                   type="password"
                   value={password}
                   placeholder="password"
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value.trim())}
                 />
                 <p className="error">{formError?.password}</p>
               </div>

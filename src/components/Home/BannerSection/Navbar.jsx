@@ -7,20 +7,22 @@ import { loginUserAtom } from "../../../global-state";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 function Navbar() {
   const IsUserLogin = useRecoilValue(loginUserAtom);
-  const setLoginUser = useSetRecoilState(loginUserAtom);
+  // const setLoginUser = useRecoilValue(loginUserAtom);
   const [LoginUserData, setLoggedInUserData] = useState("");
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("loginUser")) || "";
     if (data?.email) {
-      setLoginUser(true);
+      // setLoginUser(true);
       setLoggedInUserData(data);
-    } else {
-      setLoginUser(false);
     }
   }, []);
   return (
     <div className="Navbar">
-      {!IsUserLogin ? (
+      {IsUserLogin ? (
+        <div className="profile-container">
+          <Avatar />
+        </div>
+      ) : (
         <>
           <li>
             <LoginForm />
@@ -29,10 +31,6 @@ function Navbar() {
             <Signup />
           </li>
         </>
-      ) : (
-        <div className="profile-container">
-          <Avatar />
-        </div>
       )}
     </div>
   );

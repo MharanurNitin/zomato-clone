@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import RestaurantDescription from "../components/RestaurantDescription";
 import DishesCard from "../utils/DishesCard";
 import ImageGallery from "../utils/ImageGallery";
@@ -12,6 +12,7 @@ function ClickedSingleRestaurantDetail() {
   const changingAtoms = useRecoilValue(changingAtom);
   const [getcartDishes, setCartDishes] = useState([]);
   const { state } = useLocation();
+  const navigate = useNavigate();
 
   function findDishes(resto_id) {
     fetch(`http://localhost:3000/Dishes/getDishesofRestaurant/${resto_id}`)
@@ -61,7 +62,11 @@ function ClickedSingleRestaurantDetail() {
               ) : (
                 <h1>Nothing in cart</h1>
               )}
-              {getcartDishes.length > 0 && <button>CheckOut</button>}
+              {getcartDishes.length > 0 && (
+                <button onClick={() => navigate("/checkout/order")}>
+                  CheckOut
+                </button>
+              )}
             </div>
           </div>
         </div>

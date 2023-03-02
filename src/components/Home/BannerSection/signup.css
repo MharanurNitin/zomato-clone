@@ -21,6 +21,9 @@
     width:450px;
     gap:20px;
 }
+.error{
+    color:red;
+}
 .input-field-wrapper{
     width:100%;
 }
